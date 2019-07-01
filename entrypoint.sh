@@ -48,6 +48,9 @@ if [ -f "/.do_deploy_jasperserver" ]; then
       ./js-import.sh --input-zip $f
     done
 
+    # copy configuration for showing Image and exporting excel type
+    cp -f /applicationContext.xml /usr/local/tomcat/webapps/ROOT/WEB-INF/applicationContext.xml
+
     popd
 fi
 

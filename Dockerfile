@@ -25,6 +25,9 @@ RUN wget "https://sourceforge.net/projects/jasperserver/files/JasperServer/Jaspe
 # as recommended by https://docs.docker.com/compose/startup-order/
 ADD wait-for-it.sh /wait-for-it.sh
 
+# Used to excel and image configuration for Jasper-Server
+ADD applicationContext.xml /applicationContext.xml
+
 # Used to bootstrap JasperServer the first time it runs and start Tomcat each
 ADD entrypoint.sh /entrypoint.sh
 ADD .do_deploy_jasperserver /.do_deploy_jasperserver
